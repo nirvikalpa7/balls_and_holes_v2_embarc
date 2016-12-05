@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.755,=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.756,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.365,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\HolesAndBallsApp.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.312,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\Project1PCH1.h=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\HolesAndBallsAppPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.400,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\MainFormUnit.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.845,=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.660,=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\BasicDataTypesUnit.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.906,=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\CSceneUnit.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.781,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\CSceneUnit.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.863,=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\CSceneUnit.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.400,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\MainFormUnit.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.955,=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\CCalcBaseUnit.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.400,C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Дмитрий\Documents\Embarcadero\Studio\Projects\HolesAndBallsApp\MainFormUnit.fmx</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="android-support-v4.dex.jar"/>
+    <File Path="cloud-messaging.dex.jar"/>
+    <File Path="fmx.dex.jar"/>
+    <File Path="google-analytics-v2.dex.jar"/>
+    <File Path="google-play-billing.dex.jar"/>
+    <File Path="google-play-licensing.dex.jar"/>
+    <File Path="google-play-services.dex.jar"/>
+    <File Path="CCalcBaseUnit.cpp"/>
+    <File Path="CCalcBaseUnit.cpp"/>
+    <File Path="CCalcBaseUnit.h"/>
+    <File Path="HolesAndBallsApp.cpp"/>
+    <File Path="HolesAndBallsAppPCH1.h"/>
+    <File Path="MainFormUnit.cpp"/>
+    <File Path="MainFormUnit.cpp"/>
+    <File Path="MainFormUnit.fmx"/>
+    <File Path="MainFormUnit.h"/>
+    <File Path="CSceneUnit.cpp"/>
+    <File Path="CSceneUnit.cpp"/>
+    <File Path="CSceneUnit.h"/>
+    <File Path="BasicDataTypesUnit.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

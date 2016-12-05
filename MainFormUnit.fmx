@@ -1,0 +1,268 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'HolesAndBallsApp v2'
+  ClientHeight = 500
+  ClientWidth = 925
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object FindSolutionButton: TButton
+    Position.X = 144.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Find a solution!'
+    OnClick = FindSolutionButtonClick
+  end
+  object InputEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    ReadOnly = True
+    Position.X = 16.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 409.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object InputLabel: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'Input data:'
+  end
+  object SceneImage: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Position.X = 440.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 470.000000000000000000
+    Size.Height = 470.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object LoadInputDataButton: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Load input data'
+    OnClick = LoadInputDataButtonClick
+  end
+  object ProgrBar: TProgressBar
+    Orientation = Horizontal
+    Position.X = 136.000000000000000000
+    Position.Y = 464.000000000000000000
+    Size.Width = 289.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object InputComboBox: TComboBox
+    Items.Strings = (
+      'I wanna enter my own input data!'
+      '2 1 0   1 1   2 2'
+      '3 1 4   2 2    1 1   2 1 2 2   2 2 2 3   1 2 2 2   2 2 3 2'
+      '3 2 0   1 3 2 3   1 2 3 1'
+      '3 1 2   3 1   3 2   2 3 2 2 3 2 3 1'
+      '4 2 2   2 2 1 4   1 1 4 3   1 2 1 3 3 2 4 2'
+      '5 2 2   3 5 5 4   4 3 4 2   1 3 1 2 2 1 2 2 '
+      
+        '10 4 2    1 1 10 1 2 8 3 8    8 1 1 5  2 2 10 9    9 1 9 2 9 2 1' +
+        '0 2'
+      
+        '12 1 13    1 1  5 5   12 1 12 2    1 2 2 2    2 11 2 12   11 11 ' +
+        '12 11   11 2 11 3   2 3 3 3   3 10 3 11   10 10 11 10   10 3 10 ' +
+        '4   3 4 4 4   4 9 4 10   9 9 10 9   9 4 9 5')
+    ItemIndex = 8
+    Position.X = 16.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 409.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    OnChange = InputComboBoxChange
+  end
+  object ProgressLabel: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 464.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Calculation progress:'
+  end
+  object GroupBox1: TGroupBox
+    Position.X = 16.000000000000000000
+    Position.Y = 360.000000000000000000
+    Size.Width = 409.000000000000000000
+    Size.Height = 97.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Information'
+    TabOrder = 8
+    object TaskAmountAndSolvedLabel: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Cur. variants: 0 (solved 0)'
+    end
+    object MovmentsLabel: TLabel
+      Position.X = 232.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Movments counter: 0'
+    end
+    object ElapsedTimeLabel: TLabel
+      Position.X = 232.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Elapsed time: 0 s.'
+    end
+    object CPUsLabel: TLabel
+      Position.X = 232.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Use threads for calc:'
+    end
+    object AllSolvedVariantsLabel: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'All solved variants: 0'
+    end
+    object UsedMemoryLabel: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Used memory: 0 Mb'
+    end
+  end
+  object CalcDelayCheckBox: TCheckBox
+    Enabled = False
+    Position.X = 272.000000000000000000
+    Position.Y = 112.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Calculation delay (0,01 s)'
+  end
+  object TabControl1: TTabControl
+    Position.X = 16.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 409.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 10
+    TabPosition = PlatformDefault
+    Sizes = (
+      409s
+      174s
+      409s
+      174s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 82.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Output info'
+      ExplicitSize.cx = 82.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object OutputMemo: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          
+            'Just select input data, press "Load input data", and next "Find ' +
+            'a solution!"')
+        ReadOnly = True
+        Align = Client
+        Size.Width = 409.000000000000000000
+        Size.Height = 174.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 405.000000000000000000
+        Viewport.Height = 170.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 69.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Help info'
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object HelpMemo: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          '  Input string format:'
+          
+            '  BoardSize  BallAndHoleAmount  BorderAmount    Ball1X Ball1Y ..' +
+            '. Hole1X Hole1Y ... Border1Point1X Border1Point1Y Border1Point2X' +
+            ' Border1Point2Y ...'
+          '  Note 1: a line can contain any amount of space characters'
+          '  Note 2: ball amount equals amount of holes'
+          '  Note 3: any coordinate must start from 1'
+          ''
+          '  MaxMovements = 64'
+          '  MaxBallsAmount = 255'
+          '  MaxDigitInNumber = 3 (in any input number)'
+          ''
+          '  Supported until 4 threads for concurrent calculation.'
+          ''
+          '  Used IDE: Embarcadero RAD Studio 10.1 Berlin Architect'
+          '  Were also used: Boost, STL, Win API, FireMonkey'
+          '  '
+          '  (c) Dmitry Sidelnikov, Nov 2016, nirvikalpa@ya.ru')
+        ReadOnly = True
+        Align = Client
+        Size.Width = 409.000000000000000000
+        Size.Height = 174.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 389.000000000000000000
+        Viewport.Height = 154.000000000000000000
+      end
+    end
+  end
+  object CPU_ComboBox: TComboBox
+    Position.X = 360.000000000000000000
+    Position.Y = 384.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+  end
+end
